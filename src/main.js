@@ -100,12 +100,6 @@ function loop(timestamp) {
 
 	// draw game sprites
 	if (gameState == GameState.MAIN) {
-		// draw background
-		/*ctx.save();
-		ctx.fillStyle = "#3399ff";
-		ctx.fillRect(0, 0, screenWidth, screenHeight);*/
-
-		
 
 		ctx.save();
 		ctx.scale(2.3, 2.3);
@@ -206,7 +200,6 @@ function drawHUD(ctx) {
 			ctx.translate(screenWidth / 2, screenHeight / 2);
 			ctx.scale(6, 6);
 			ctx.globalAlpha = 0.5;
-			//ctx.drawImage(imageData.cage2, -20, -30, 41, 59);
 
 			ctx.restore();
 
@@ -216,16 +209,13 @@ function drawHUD(ctx) {
 			fillText(ctx, "Airborn", screenWidth / 2, screenHeight / 2 - 100, "38pt 'Anton', sans-serif", "red");
 			fillText(ctx, "Onslaught!", screenWidth / 2, screenHeight / 2 - 20, "38pt 'Anton', sans-serif", "red");
 
-			//ctx.drawImage(imageData.cage1, 100, screenHeight / 2 + 40, 50, 60);
-			//ctx.drawImage(imageData.cage1, screenWidth - 100 - 50, screenHeight / 2 + 40, 50, 60);
-
 			// Name
 			fillText(ctx, "By James Licata", screenWidth / 2, screenHeight / 2 + 70, "18pt 'Anton', sans-serif", "white");
-			//strokeText(ctx, "By James Licata", screenWidth / 2, screenHeight / 2 + 70, "14pt 'Press Start 2P', cursive", "white", 2);
 
 			// instructions
-			//fillText(ctx, "YOUR GOAL: To click all the Nick Cage's!", screenWidth / 2, screenHeight / 2 + 125, "8pt 'Press Start 2P', cursive", "red");
-			fillText(ctx, "Click anywhere to begin", screenWidth / 2, screenHeight / 2 + 170, "20pt 'Anton', sans-serif", "white");
+			fillText(ctx, "Click the jetpack guy to launch him upwards.", screenWidth / 2, screenHeight / 2 + 125, "15pt 'Anton', sans-serif", "red");
+			fillText(ctx, "Land on all of the monsters!", screenWidth / 2, screenHeight / 2 + 150, "15pt 'Anton', sans-serif", "red");
+			fillText(ctx, "Click anywhere to begin", screenWidth / 2, screenHeight / 2 + 200, "20pt 'Anton', sans-serif", "white");
 
 
 			break;
@@ -384,13 +374,7 @@ function strokeText(ctx, string, x, y, css, color, lineWidth) {
 function checkLevelTimer(timestamp) {
 	let elapsedTime = (timestamp - startTime) / 1000;
 	let timeRemaining = Math.ceil(levelTimeLimit + elapsedTime);
-	if (timeRemaining < 0 && timeRemaining < lastTimeRemaining) {
-		//levelScore--;
-		//totalScore--;
-		//hitWrongSound.play();
-	}
 	lastTimeRemaining = timeRemaining;
-	// let displayTime = timeRemaining;
 	return timeRemaining;
 }
 

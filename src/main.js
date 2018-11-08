@@ -207,7 +207,7 @@ function drawHUD(ctx) {
 			ctx.textAlign = "center";
 			ctx.textBaseline = "middle";
 			fillText(ctx, "Airborn", screenWidth / 2, screenHeight / 2 - 100, "38pt 'Anton', sans-serif", "red");
-			fillText(ctx, "Onslaught!", screenWidth / 2, screenHeight / 2 - 20, "38pt 'Anton', sans-serif", "red");
+			fillText(ctx, "Assault!", screenWidth / 2, screenHeight / 2 - 20, "38pt 'Anton', sans-serif", "red");
 
 			// Name
 			fillText(ctx, "By James Licata", screenWidth / 2, screenHeight / 2 + 70, "18pt 'Anton', sans-serif", "white");

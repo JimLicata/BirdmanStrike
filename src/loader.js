@@ -3,8 +3,7 @@ import {loadImages} from './helpers.js';
 
 const imageSources = {
 		player:'images/player.png',
-		bird:'images/bird.png',
-		x:'images/x.png'
+		monster:'images/monster.png',
 };
 
 // loadImages(imageSourcesObject,callback);
